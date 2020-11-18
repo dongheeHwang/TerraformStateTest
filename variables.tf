@@ -1,7 +1,7 @@
 variable "company_name"{
   type = string
   description = "TDGWVDSync Name"
-  default = "wvddemotest"
+  default = "hdhwvddemo"
 }
 
 variable "wvdsync_resource_group" {
