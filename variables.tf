@@ -26,8 +26,3 @@ variable "iam_rg_list" {
   description = "Resource group to Contributor IAM"
   default = ["RG-DEMO"]
 }
-
-variable "azuread_application_id" {
-  type = string
-  default = "afef6f76-520e-dd36-189b-28dac18aaae7"
-}
