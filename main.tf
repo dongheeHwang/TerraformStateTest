@@ -102,6 +102,11 @@ resource "azurerm_role_assignment" "wvdsync" {
 data "azurerm_subscription" "current" {
 }
 
+# resource "azurerm_app_service_source_control_token" "repo" {
+#   type  = "GitHub"
+#   token = "cd0f239fbf78136466209d32ada77c64badaf885"
+# }
+
 # terraform-wvdsync-rg 리소스 그룹내에
 # FunctionApp wvdsync를 등록한다.
 resource "azurerm_function_app" "wvdsync" {
@@ -142,11 +147,10 @@ resource "azurerm_function_app" "wvdsync" {
     }
   }
 
-  source_control {
-    repo_url = "https://github.com/dongheeHwang/WVDSync"
-    branch = "main"
-
-  }
+  # source_control {
+  #   repo_url = "https://github.com/dongheeHwang/WVDSync.Git"
+  #   branch = "main"
+  # }
 }
 
 output "base_uri" {

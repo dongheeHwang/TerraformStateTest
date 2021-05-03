@@ -8,12 +8,12 @@ terraform {
     }
   }
 
-  backend "remote"{
-    organization = "donggalland"
-    workspaces{
-      name = "TerraformStateTest"
-    }
-  }
+  # backend "remote"{
+  #   organization = "donggalland"
+  #   workspaces{
+  #     name = "TerraformStateTest"
+  #   }
+  # }
 
   required_version = ">= 0.13"
 }
